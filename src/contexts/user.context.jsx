@@ -7,25 +7,21 @@ export const UserContext = createContext({
 });
 
 export const UserProvider = ({children}) => {
-    const [currentUser, setCurrentUser] = useState(null);
-    const value = {currentUser, setCurrentUser};
+  const [currentUser, setCurrentUser] = useState(null);
+  const value = { currentUser, setCurrentUser };
 
-    // signOutUser();
+  // signOutUser();
 
-    useEffect(()=>{
-        const unsuscribe = onAuthStateChangedListener((user)=>{
-            if(user){
-                createUserDocumentFromAuth(user);
-            }
-            console.log(user);
-            setCurrentUser(user);
-            
+  useEffect(() => {
+    const unsuscribe = onAuthStateChangedListener((user) => {
+      if (user) {
+        createUserDocumentFromAuth(user);
+      }
+      console.log(user);
+      setCurrentUser(user);
+    });
+    return unsuscribe;
+  }, []);
 
-        })
-        return unsuscribe;
-    }, [])
-
-    return (
-      <UserContext.Provider value={value}> {children}</UserContext.Provider>
-    );
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 }
