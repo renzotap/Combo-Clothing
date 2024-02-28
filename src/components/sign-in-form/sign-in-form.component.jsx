@@ -6,7 +6,7 @@ import {
 } from "../../utils/firebase/firebaje.utils";
 import FormInput from "../form-input/form-input.component";
 import './sign-in-form.styles.scss'
-import Button from "../button/button.component";
+import Button, {BUTTON_TYPE_CLASSES} from "../button/button.component";
 
 
 const defaultFormFields = {
@@ -81,10 +81,13 @@ const SignInForm = () => {
           ></FormInput>
           <div className="buttons-container">
             <Button type="submit"> Sign In</Button>
-            <Button type='button' onClick={signInWithGoogle} buttonType="google">
-              {" "}
-              Google Sign In
-            </Button>
+            <Button
+              buttonType={BUTTON_TYPE_CLASSES.google}
+              type='button'
+              onClick={signInWithGoogle}
+            >
+              Sign In with Google
+            </Button> {/* Here is giving error when not signing in after a certain time */}
           </div>
         </form>
       </div>
