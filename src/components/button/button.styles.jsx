@@ -36,9 +36,11 @@ export const GoogleSignInButton = styled(BaseButton)`
 `;
 
 export const InvertedButton = styled(BaseButton)`
+  font-size: small;
   background-color: white;
   color: black;
   border: 1px solid black;
+  display: flex;
 
   &:hover {
     background-color: black;

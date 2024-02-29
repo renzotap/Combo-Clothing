@@ -9,6 +9,7 @@ export const BackgroundImage = styled.div`
 `;
 export const Body = styled.div`
   height: 100px;
+
   padding: 0 25px;
   display: flex;
   flex-direction: column;
