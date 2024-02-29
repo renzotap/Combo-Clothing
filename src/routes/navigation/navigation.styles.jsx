@@ -14,14 +14,17 @@ export const LogoContainer = styled(Link)`
   height: 100%;
   width: 100px;
   padding-left: 20px;
+  align-items: center;
   /* padding: 25px; */
   h2 {
     font-weight: bold;
-    padding-right: 32px;
+    /* padding-right: 32px; */
     font-size: 12px;
     width: 100px;
     color: #4a4a4a;
     display: flex;
+    align-items: center;
+    text-align: center;
   }
 `;
 
