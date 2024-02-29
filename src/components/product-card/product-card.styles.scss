@@ -1,7 +1,7 @@
 .product-card-container {
-    width: 40%;
+    width: 30%;
     flex-direction: column;
-    height: 400px;
+    height: 380px;
     position: relative;
     flex: 1 1 auto;
     display: flex;
@@ -12,12 +12,13 @@
     margin-bottom: 40px;
     // margin-left: 10px;
     // margin-right: 10px;
-    border: 1px solid red;
+    // border: 1px solid red;
+    overflow: hidden;
     
     
     img {
         width: 100%;
-        height: 100%;
+        height: 80%;
         object-fit:cover;
         // margin-bottom: 30px;
         // margin-left: 4px;
@@ -56,11 +57,11 @@
         .name {
             width: 90%;
 
-            // margin-top: 15px;
+            margin-top: 15px;
         }
         
         .price {
-            // margin-top: 15px;
+            margin-top: 15px;
             width: 10%;
         }
     }
