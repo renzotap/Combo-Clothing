@@ -12,17 +12,17 @@ export const NavigationContainer = styled.div`
 `;
 export const LogoContainer = styled(Link)`
   height: 100%;
-  width: 100px;
-  padding-left: 20px;
+  width: 80px;
+  padding-left: 10px;
+  text-align: center;
   align-items: center;
   /* padding: 25px; */
   h2 {
     font-weight: bold;
     /* padding-right: 32px; */
     font-size: 12px;
-    width: 100px;
+    width: 70px;
     color: #4a4a4a;
-    display: flex;
     align-items: center;
     text-align: center;
   }
