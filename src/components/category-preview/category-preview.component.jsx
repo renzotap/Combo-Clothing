@@ -11,7 +11,7 @@ const CategoryPreview = ({title, products}) => {
     <div className='preview'>
     {
       products
-      .filter((_, idx) => idx < 4)
+      .filter((_, idx) => idx < 5)
       .map ((product) => (
       <ProductCard key={product.id} product={product}/>
       ))}
