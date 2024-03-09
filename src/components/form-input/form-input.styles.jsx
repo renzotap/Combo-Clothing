@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const subColor = "grey";
-const mainColor = "black";
+const mainColor = "blue";
 
 const shrinkLabelStyles = css`
   top: -14px;
@@ -9,13 +9,15 @@ const shrinkLabelStyles = css`
   color: ${mainColor};
 `;
 export const FormInputLabel = styled.label`
-  color: ${subColor};
   font-size: 16px;
+  top: 10px;
+  color: ${subColor};
+
+
   font-weight: normal;
   position: absolute;
   pointer-events: none;
   left: 5px;
-  top: 10px;
   transition: 300ms ease all;
 
   ${({ shrink }) => shrink && shrinkLabelStyles};
