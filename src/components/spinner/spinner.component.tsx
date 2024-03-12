@@ -1,9 +1,9 @@
 import { SpinnerContainer, SpinnerOverlay } from "./spinner.styles";
 
 
-const Spinner = () => {
+const Spinner: React.FC = () => (
   <SpinnerOverlay>
-    <SpinnerContainer/>
+    <SpinnerContainer />
   </SpinnerOverlay>
-}
+);
 export default Spinner;

@@ -1,10 +1,10 @@
-import { useState,  } from "react"
+import { useState, FormEvent, ChangeEvent  } from "react"
 import { useDispatch } from "react-redux";
 import {
   signInWithGooglePopup,
   signInAuthUserWithEmailAndPassword,
 
-} from "../../utils/firebase/firebaje.utils";
+} from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import './sign-in-form.styles'
 import { SignInContainer, ButtonsContainer } from "./sign-in-form.styles";
@@ -32,7 +32,7 @@ const SignInForm = () => {
       dispatch(googleSignInStart())
     };
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
 
       try{
@@ -40,7 +40,7 @@ const SignInForm = () => {
         resetFormFields();
 
       }catch(error){
-        switch(error.code){
+        switch(error){
           case 'auth/invalid-credential':
             alert('The user and/or password is incorrect')
             break;
@@ -57,7 +57,7 @@ const SignInForm = () => {
       }
     };
 
-    const handleChange = (event) => {
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
       const { name, value } = event.target;
       setFormFields({ ...formFields, [name]: value });
     };
@@ -66,7 +66,7 @@ const SignInForm = () => {
       <SignInContainer>
         <h2> Already have an account?</h2>
         <span> Sign in with your email and password</span>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={ handleSubmit}>
           <FormInput
             label="Email"
             type="email"

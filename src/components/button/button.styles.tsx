@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import {SpinnerContainer} from '../spinner/spinner.styles'
 
@@ -39,11 +39,11 @@ export const GoogleSignInButton = styled(BaseButton)`
 `;
 
 export const InvertedButton = styled(BaseButton)`
-  font-size: small;
+  /* font-size: small; */
   background-color: white;
   color: black;
   border: 1px solid black;
-  display: flex;
+  /* display: flex; */
 
   &:hover {
     background-color: black;
