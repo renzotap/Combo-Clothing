@@ -10,7 +10,7 @@ import App from './App';
 import './index.scss';
 import { persistor, store } from './store/store';
 import { stripePromise } from './utils/stripe/stripe.utils';
-
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration"
 // const rootElement = document.getElementById("root");
 // render(
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -32,3 +32,4 @@ root.render(
 
 );
         
+serviceWorkerRegistration.register();
