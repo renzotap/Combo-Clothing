@@ -25,7 +25,7 @@ const Navigation = () => {
       <NavigationContainer>
         <LogoContainer to="/">
           <CrwnLogo />
-          <h2>Combo King</h2>
+          <h1>Combo King</h1>
         </LogoContainer>
 
         <NavLinks>

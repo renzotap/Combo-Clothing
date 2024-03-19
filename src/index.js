@@ -7,7 +7,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Elements } from '@stripe/react-stripe-js';
 
 import App from './App';
-import './index.scss';
+// import './index.scss';
 import { persistor, store } from './store/store';
 import { stripePromise } from './utils/stripe/stripe.utils';
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration"
