@@ -5,8 +5,8 @@ export const ShoppingIcon = styled.div`
   height: 25px;
 `;
 export const CartIconContainer = styled.div`
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,5 +20,5 @@ export const ItemCount = styled.span`
   position: absolute;
   font-size: 10px;
   font-weight: bold;
-  bottom: 5px;
+  bottom: 2px;
 `;
