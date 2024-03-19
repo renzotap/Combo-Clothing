@@ -11,7 +11,7 @@ export const NavigationContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     height: 100px;
-    padding: 10px 20px;
+    padding: 2px 2px;
     /* margin-bottom: 50px; */
   }
 `;
@@ -25,7 +25,7 @@ export const LogoContainer = styled(Link)`
     flex-direction: column;
     /* display: flex; */
     flex: auto;
-    font-size: 10px;
+    font-size: 9px;
     width: 50px;
     height: 20px;
     color: #4a4a4a;
