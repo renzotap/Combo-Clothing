@@ -17,6 +17,7 @@ const App = () => {
   }, []);
 
   return (
+    // <GlobalStyle>
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="checkout" element={<Checkout />} />
       </Route>
     </Routes>
+    // </GlobalStyle>
   );
 };
 
