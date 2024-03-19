@@ -2,43 +2,40 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavigationContainer = styled.div`
-  height: 100px;
+  height: 120px;
   width: 100%;
   display: flex;
-
+  padding: 10px 2px;
   justify-content: space-between;
-  /* margin-bottom: 30px; */
-
-  @media screen and (max-width: 800px) {
-    height: 100px;
-    padding: 2px 2px;
-    /* margin-bottom: 50px; */
-  }
 `;
+
 export const LogoContainer = styled(Link)`
   height: 100%;
   width: 80px;
-  flex-direction: column;
-  align-items: center;
   padding: 10px;
+  align-items: center;
+  text-align: center;
+
   h1 {
-    flex-direction: column;
-    /* display: flex; */
-    flex: auto;
     font-size: 9px;
-    width: 50px;
+    width: 65px;
     height: 20px;
     color: #4a4a4a;
     align-items: center;
     text-align: center;
+
     @media screen and (max-width: 800px) {
+      width: 60px;
       align-items: center;
       text-align: center;
     }
   }
+
   @media screen and (max-width: 800px) {
-    width: 50px;
-    padding: 0px;
+    text-align: center;
+    align-items: center;
+    width: 65px;
+    padding: 5px;
   }
 `;
 
@@ -50,13 +47,13 @@ export const NavLinks = styled.div`
   justify-content: flex-end;
 
   @media screen and (max-width: 800px) {
-    width: 80%;
+    width: 100%;
     padding: 0px;
   }
 `;
 
 export const NavLink = styled(Link)`
-  padding: 10px 15px;
+  padding: 10px 12px;
   cursor: pointer;
 `;
 

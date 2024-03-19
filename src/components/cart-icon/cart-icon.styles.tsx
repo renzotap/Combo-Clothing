@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const ShoppingIcon = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 `;
 export const CartIconContainer = styled.div`
-  width: 25px;
+  width: 30px;
   height: 45px;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-left: 10px;
