@@ -6,11 +6,12 @@ import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
 import {
   ProductCartContainer,
+  ImageAndFooterContainer,
   Footer,
   Name,
   Price,
 } from "./product-card.styles";
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import { CategoryItem } from "../../store/categories/category.types";
 
 type ProductCardProps = {
@@ -24,19 +25,23 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
   const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
 
   return (
-    <ProductCartContainer>
-      <img src={imageUrl} alt={`${name}`} />
+    <ImageAndFooterContainer>
+      <ProductCartContainer>
+        <img 
+        src={imageUrl} 
+        alt={`${name}`} />
+        <Button
+          buttonType={BUTTON_TYPE_CLASSES.inverted}
+          onClick={addProductToCart}
+        >
+          Add to card
+        </Button>
+      </ProductCartContainer>
       <Footer>
         <Name>{name}</Name>
         <Price>{price}</Price>
       </Footer>
-      <Button
-        buttonType={BUTTON_TYPE_CLASSES.inverted}
-        onClick={addProductToCart}
-      >
-        Add to card
-      </Button>
-    </ProductCartContainer>
+    </ImageAndFooterContainer>
   );
 };
 

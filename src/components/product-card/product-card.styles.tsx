@@ -1,28 +1,26 @@
 import styled from 'styled-components';
 
+export const ImageAndFooterContainer = styled.div`
+  
+`
 export const ProductCartContainer = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  height: 350px;
-  align-items: center;
+  height: 300px;
   position: relative;
-  margin-bottom: 30px;
-  flex: 1 1 auto;
   overflow: hidden;
-
+  grid-template-columns: 1fr;
+  /* border: 1px solid red; */
   img {
     width: 100%;
-    height: 95%;
+    height: 100%;
     object-fit: cover;
-    margin-bottom: 15px;
   }
 
   button {
     width: 100%;
     opacity: 0.7;
     position: absolute;
-    top: 255px;
+    top: 200px;
     /* display: none; */
   }
 
@@ -80,15 +78,17 @@ export const ProductCartContainer = styled.div`
 
 export const Footer = styled.div`
   width: 100%;
-  height: 5%;
+  height: 10%;
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+  overflow: hidden;
+  grid-template-columns: 1fr;
 `;
 
 export const Name = styled.span`
   width: 90%;
-  margin-bottom: 15px;
+  overflow: hidden;
 `;
 
 export const Price = styled.span`
